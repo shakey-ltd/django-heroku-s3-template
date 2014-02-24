@@ -18,45 +18,45 @@ Detailed instructions comming soon...
 
 #### 2. Install Django
 
-    ```
+```
     $ pip install django
-    ```
+```
 
 #### 3. Create the new project using the a template
 
-    ```
+```
     $ django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
-    ```
+```
 
 #### 4. Install additional dependencies for development
 
-    ```
+```
     $ pip install -r requirements/local.txt
-    ```
+```
 
 #### 5. Change project_name to hellodjango in Procfile
 
-    ```
+```
     web: gunicorn hellodjango.wsgi
-    ```
+```
 
 #### 6. Store your app in Git
 
-    ```
+```
     $ git init
     $ git commit -am "initial"
-    ```
+```
 
 #### 7. Deploy to Heroku
 
-    ```
+```
     $ heroku create
     $ git push heroku master
-    ```
+```
 
 #### 8. Set Heroku environment
 
-    ```
+```
     $ heroku config:set DJANGO_SETTINGS_MODULE=hellodjango.settings.production
     $ heroku config:set SECRET_KEY=my_random_secret_key
     $ heroku config:set AWS_STORAGE_BUCKET_NAME=my_application_bucket
@@ -64,13 +64,13 @@ Detailed instructions comming soon...
     $ heroku config:set AWS_SECRET_ACCESS_KEY=my_secret_key
     $ heroku ps:scale web=1
     $ heroku run python manage.py collectstatic
-    ```
+```
 
 #### 9. Finally...
 
-    ```
+```
     $ heroku open
-    ```
+```
 
 
 #### Acknowledgements
