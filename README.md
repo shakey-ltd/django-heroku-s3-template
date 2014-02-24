@@ -1,45 +1,42 @@
-===========================
-Django, Heroku, S3 template
-===========================
+# Django, Heroku, S3 template
 
 A project template for Django 1.6.2 to deploy on Heroku with statics on S3.
 
 Detailed instructions comming soon...
 
-Fast rundown
-============
+## Fast rundown
 
-#. Create your working environment
+1. Create your working environment
 
     $ mkdir hellodjango && cd hellodjango
     $ virtualenv venv --distribute
     $ source venv/bin/activate
 
-#. Install Django
+2. Install Django
 
     $ pip install django
 
-#. Create the new project using the a template
+3. Create the new project using the a template
 
     $ django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
 
-#. Install additional dependencies for development
+4. Install additional dependencies for development
 
     $ pip install -r requirements/local.txt
 
-#. Change project_name to hellodjango in Procfile
+5. Change project_name to hellodjango in Procfile
 
-#. Store your app in Git
+6. Store your app in Git
 
     $ git init
     $ git commit -am "initial"
 
-#. Deploy to Heroku
+7. Deploy to Heroku
 
     $ heroku create
     $ git push heroku master
 
-#. Set Heroku environment
+8. Set Heroku environment
 
     $ heroku config:set DJANGO_SETTINGS_MODULE=hellodjango.settings.production
     $ heroku config:set SECRET_KEY=my_random_secret_key
@@ -49,12 +46,10 @@ Fast rundown
     $ heroku ps:scale web=1
     $ heroku run python manage.py collectstatic
 
-#. Finally...
+9. Finally...
 
     $ heroku open
 
 
-Acknowledgements
-================
-
-- Two scoops of Django people... https://github.com/twoscoops/django-twoscoops-project
+### Acknowledgements
+Two scoops of Django people... https://github.com/twoscoops/django-twoscoops-project
