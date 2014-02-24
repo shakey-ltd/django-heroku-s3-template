@@ -37,14 +37,15 @@ Detailed instructions comming soon...
 #### 5. Change project_name to hellodjango in Procfile
 
 ```
-    web: gunicorn hellodjango.wsgi
+    $ echo web: gunicorn hellodjango.wsgi > Procfile
 ```
 
 #### 6. Store your app in Git
 
 ```
     $ git init
-    $ git commit -am "initial"
+    $ git add .
+    $ git commit -m "initial"
 ```
 
 #### 7. Deploy to Heroku
