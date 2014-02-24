@@ -1,16 +1,20 @@
 # Django, Heroku, S3 template
 
-A project template for Django 1.6.2 to deploy on Heroku with statics on S3.
+
+**A project template for Django 1.6.2 to deploy on Heroku with statics on S3.**
 
 Detailed instructions comming soon...
+
 
 ## Fast rundown
 
 1. Create your working environment
 
+    '''
     $ mkdir hellodjango && cd hellodjango
     $ virtualenv venv --distribute
     $ source venv/bin/activate
+    '''
 
 2. Install Django
 
