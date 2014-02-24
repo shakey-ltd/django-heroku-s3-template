@@ -1,10 +1,60 @@
+===========================
 Django, Heroku, S3 template
-=========================
+===========================
 
-Comming soon...
+A project template for Django 1.6.2 to deploy on Heroku with statics on S3.
+
+Detailed instructions comming soon...
+
+Fast rundown
+============
+
+#. Create your working environment
+
+    $ mkdir hellodjango && cd hellodjango
+    $ virtualenv venv --distribute
+    $ source venv/bin/activate
+
+#. Install Django
+
+    $ pip install django
+
+#. Create the new project using the a template
+
+    $ django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
+
+#. Install additional dependencies for development
+
+    $ pip install -r requirements/local.txt
+
+#. Change project_name to hellodjango in Procfile
+
+#. Store your app in Git
+
+    $ git init
+    $ git commit -am "initial"
+
+#. Deploy to Heroku
+
+    $ heroku create
+    $ git push heroku master
+
+#. Set Heroku environment
+
+    $ heroku config:set DJANGO_SETTINGS_MODULE=hellodjango.settings.production
+    $ heroku config:set SECRET_KEY=my_random_secret_key
+    $ heroku config:set AWS_STORAGE_BUCKET_NAME=my_application_bucket
+    $ heroku config:set AWS_ACCESS_KEY_ID=my_key_id
+    $ heroku config:set AWS_SECRET_ACCESS_KEY=my_secret_key
+    $ heroku ps:scale web=1
+    $ heroku run python manage.py collectstatic
+
+#. Finally...
+
+    $ heroku open
 
 
-virtualenv --distribute venv
-source venv/bin/activate
-pip install django
-django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html my_project
+Acknowledgements
+================
+
+- Two scoops of Django people... https://github.com/twoscoops/django-twoscoops-project

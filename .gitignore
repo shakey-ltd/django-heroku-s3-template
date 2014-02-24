@@ -1,6 +1,9 @@
 # Static files
 assets
 
+# virtualenv
+venv
+
 # Python bytecode:
 *.py[co]
 
