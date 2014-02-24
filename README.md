@@ -10,11 +10,11 @@ Detailed instructions comming soon...
 
 #### 1. Create your working environment
 
-    ```
+```
     $ mkdir hellodjango && cd hellodjango
     $ virtualenv venv --distribute
     $ source venv/bin/activate
-    ```
+```
 
 #### 2. Install Django
 
