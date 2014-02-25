@@ -37,7 +37,7 @@ Detailed instructions comming soon...
 #### 5. Change project_name to hellodjango in Procfile
 
 ```
-    $ echo web: gunicorn hellodjango.wsgi > Procfile
+    $ echo web: gunicorn hellodjango.wsgi --chdir hellodjango > Procfile
 ```
 
 #### 6. Store your app in Git
@@ -64,7 +64,7 @@ Detailed instructions comming soon...
     $ heroku config:set AWS_ACCESS_KEY_ID=my_key_id
     $ heroku config:set AWS_SECRET_ACCESS_KEY=my_secret_key
     $ heroku ps:scale web=1
-    $ heroku run python manage.py collectstatic
+    $ heroku run python hellodjango/manage.py collectstatic
 ```
 
 #### 9. Finally...
