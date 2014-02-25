@@ -29,7 +29,7 @@ Tired of typing? Use [automation](https://github.com/JGypsy/django-heroku-s3-tem
     $ pip install django
 ```
 
-#### 3. Create the new project using the a template
+#### 3. Create the new project using a template
 
 ```
     $ django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
