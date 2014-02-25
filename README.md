@@ -1,13 +1,11 @@
 # Django, Heroku, S3 template
 
-**A project template for Django 1.6.2 with a production settings to easily deploy on Heroku with statics on S3.**
+#### *A project template for Django 1.6.2 with a production settings to easily deploy on Heroku with statics on S3.*
 
-Use simple [automation](https://github.com/JGypsy/django-heroku-s3-template/wiki/provisioning) for more fun.
-
-Detailed instructions comming soon...
+Tired of typing? Use [automation](https://github.com/JGypsy/django-heroku-s3-template/wiki/provisioning)
 
 
-### Pre-requisites
+#### Pre-requisites
 
 - heroku account and [toolbelt](https://toolbelt.heroku.com/) installed
 - git installed
