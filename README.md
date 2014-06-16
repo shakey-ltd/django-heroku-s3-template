@@ -2,7 +2,7 @@
 
 #### A project template for Django 1.6.2 with a production settings to easily deploy on Heroku with statics on S3.
 
-Tired of typing? Use [automation](https://github.com/JGypsy/django-heroku-s3-template/wiki/provisioning)
+Tired of typing? Use [automation](https://github.com/shakey-uk/django-heroku-s3-template/wiki/provisioning)
 
 
 #### Pre-requisites
@@ -32,7 +32,7 @@ Tired of typing? Use [automation](https://github.com/JGypsy/django-heroku-s3-tem
 #### 3. Create the new project using a template
 
 ```
-    $ django-admin.py startproject --template=https://github.com/JGypsy/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
+    $ django-admin.py startproject --template=https://github.com/shakey-uk/django-heroku-s3-template/archive/master.zip --extension=py,rst,html hellodjango .
 ```
 
 #### 4. Install additional dependencies for development
